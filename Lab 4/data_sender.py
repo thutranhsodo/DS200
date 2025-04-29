@@ -23,7 +23,7 @@ def run_streaming_server(host='127.0.0.1', port=9999):
                     while True:
                         sample_data = generate_data()
                         client_conn.sendall((sample_data + '\n').encode())
-                        print(f"📤 Gửi: {sample_data}")
+                        print(f"Gửi: {sample_data}")
                         time.sleep(0.5)
                 except (ConnectionResetError, ConnectionAbortedError, BrokenPipeError):
                     print("\nClient đã ngắt kết nối. Dừng phiên làm việc...")
